@@ -4,4 +4,4 @@ Feature: Add new items
     Given Toby starts with an empty list
     When he adds "Buy some milk" to his list
     Then the todo list should contain the following items:
-      | Buy some apples|
+      | Buy some milk|
