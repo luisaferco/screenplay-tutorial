@@ -10,7 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
-import screenplay.questions.travelocity.DepartureFlight;
+import screenplay.questions.booking.DepartureFlight;
 import screenplay.tasks.todolist.SearchAFlight;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

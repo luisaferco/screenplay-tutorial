@@ -9,12 +9,7 @@ import net.serenitybdd.screenplay.*;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.conditions.ConditionalPerformable;
-import net.serenitybdd.screenplay.conditions.ConditionalPerformableOnQuestion;
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
 import screenplay.questions.todolist.Items;
-import screenplay.questions.travelocity.DepartureFlight;
 import screenplay.tasks.todolist.AddAnItem;
 
 import java.util.List;
@@ -23,7 +18,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 
-public class TodoStepDefinitions {
+public class TodoListStepDefinitions {
 
     @Before
     public void setStage () {

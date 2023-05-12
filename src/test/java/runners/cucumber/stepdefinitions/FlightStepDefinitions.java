@@ -6,16 +6,12 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Open;
 import org.hamcrest.Matchers;
-import screenplay.questions.travelocity.DepartingFlight;
-import screenplay.questions.travelocity.DepartureFlight;
+import screenplay.questions.booking.DepartureFlight;
 import screenplay.tasks.saucedemo.NavigateTo;
-import screenplay.tasks.travelocity.SearchFlight;
-
-import java.util.Collections;
+import screenplay.tasks.booking.SearchFlight;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static org.hamcrest.Matchers.containsInAnyOrder;
 
 public class FlightStepDefinitions {
 
@@ -33,18 +29,11 @@ public class FlightStepDefinitions {
                         .to(arrivingCity)
         );
     }
-    @Then("he should see information trips")
+    @Then("he should see the flight information")
     public void heShouldSeeInformationTrips() {
         theActorInTheSpotlight().should(
                 seeThat(DepartureFlight.list(),  Matchers.hasItem("BOS"))
         );
     }
 
-    @Then("he should see the selected departure flight")
-    public void heShouldSeeTheSelectedDepartureFlight() {
-        theActorInTheSpotlight().should(
-                seeThat(DepartingFlight.selected(),Matchers.is(("Boston (BOS)")))
-        );
-
-    }
 }

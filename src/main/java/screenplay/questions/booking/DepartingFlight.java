@@ -1,4 +1,4 @@
-package screenplay.questions.travelocity;
+package screenplay.questions.booking;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

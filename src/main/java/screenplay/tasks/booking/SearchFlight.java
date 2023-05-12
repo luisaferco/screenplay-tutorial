@@ -1,4 +1,4 @@
-package screenplay.tasks.travelocity;
+package screenplay.tasks.booking;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
