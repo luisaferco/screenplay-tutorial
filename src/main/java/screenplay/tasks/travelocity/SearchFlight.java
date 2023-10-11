@@ -21,10 +21,11 @@ public class SearchFlight implements Task {
                 Click.on(LEAVING_FROM_BTN),
                 Hit.the(Keys.BACK_SPACE).into(DEPARTURE_TXT),
                 Enter.theValue(from).into(DEPARTURE_TXT).thenHit(Keys.ENTER),
-                Click.on(OPT_DEPARTURE_CITY),
+                Click.on(OPT_CITY),
                 Click.on(GOING_TO_BTN),
+                Hit.the(Keys.BACK_SPACE).into(ARRIVING_TXT),
                 Enter.theValue(to).into(ARRIVING_TXT).thenHit(Keys.ENTER),
-                Click.on(OPT_ARRIVING_CITY),
+                Click.on(OPT_CITY),
                 Click.on(SEARCH_BTN)
         );
     }
