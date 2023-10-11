@@ -14,7 +14,6 @@
         <junit5.version>5.8.2</junit5.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
-        <parallel.tests>2</parallel.tests>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -104,13 +103,6 @@
                     <includes>
                         <include>**/features/**/*.java</include>
                     </includes>
-                    <systemPropertyVariables>
-                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
-                    </systemPropertyVariables>
-                    <parallel>classes</parallel>
-                    <threadCount>${parallel.tests}</threadCount>
-                    <forkCount>${parallel.tests}</forkCount>
                 </configuration>
                 <executions>
                     <execution>
