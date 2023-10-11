@@ -17,7 +17,7 @@ public class DepartureFlight implements Question<Collection<String>> {
 
     @Override
     public Collection<String> answeredBy(Actor actor) {
-        actor.attemptsTo(WaitUntil.the(FlightResultsPage.SEARCH_TAB_BEST, WebElementStateMatchers.isVisible())
+        actor.attemptsTo(WaitUntil.the(FlightResultsPage.SELECT_SORT_BY, WebElementStateMatchers.isVisible())
                 .forNoMoreThan(Duration.ofSeconds(20)));
         return Text.ofEach(FlightResultsPage.DEPARTURE_LIST).answeredBy(actor);
     }

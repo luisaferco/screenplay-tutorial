@@ -1,11 +1,17 @@
 package screenplay.tasks.saucedemo;
 
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.matchers.statematchers.IsCurrentlyVisibleMatcher;
+import net.serenitybdd.screenplay.questions.Visibility;
+import net.serenitybdd.screenplay.ui.Button;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.WebDriver;
 import screenplay.model.NavigationComponent;
 import screenplay.user_interface.booking.BookingPage;
 
@@ -22,10 +28,9 @@ public class NavigateTo implements Task {
     @Override
     public <T extends Actor> void performAs(T theActor) {
         theActor.attemptsTo(
-                WaitUntil.the(BookingPage.CLOSE_MODAL, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(Duration.ofSeconds(5)),
-                Click.on(BookingPage.CLOSE_MODAL),
-                Click.on(BookingPage.NAVIGATION_FORM.of(option))
+                Check.whether(Visibility.of(BookingPage.CLOSE_MODAL).answeredBy(theActor))
+                                .andIfSo(Click.on(BookingPage.CLOSE_MODAL)),
+                Click.on(BookingPage.NAVIGATION_FORM.containingText(option))
         );
     }
     public static NavigateTo flights(){

@@ -8,9 +8,10 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "src/test/resources/features/booking/flights.feature",
+        features = "src/test/resources/features/travelocity/booking_flight.feature",
         glue = "runners.cucumber.stepdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        tags = "@ignore"
 )
 public class BookingTestSuite {
 }
