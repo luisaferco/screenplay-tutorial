@@ -13,18 +13,13 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.assertj.core.api.SoftAssertions;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Convert;
-import org.openqa.selenium.WebElement;
 import pom.pages.TodoListPage;
-import screenplay.model.Label;
 import screenplay.questions.todolist.Items;
 import screenplay.tasks.todolist.AddAnItem;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
