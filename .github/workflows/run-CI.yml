@@ -28,7 +28,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run tests
-        run: mvn clean verify -Dtest=TodoListTest serenity:aggregate
+        run: mvn clean verify serenity:aggregate
 
       - name: Upload Serenity Report
         uses: actions/upload-artifact@v4
@@ -36,5 +36,5 @@ jobs:
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           name: Serenity Report
-          path: target/site/serenity/index.html
+          path: target/site/serenity/
         
