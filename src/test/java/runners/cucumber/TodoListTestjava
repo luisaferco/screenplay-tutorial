@@ -12,4 +12,4 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE
         ,tags = "@solo"
 )
-public class TodoListTestSuite {}
+public class TodoListTest {}
