@@ -31,11 +31,13 @@ jobs:
         run: mvn clean
 
       - name: Run tests
-        run: mvn verify
+        run: mvn verify serenity:aggregate
 
-      - uses: deblockt/cucumber-report-annotations-action@v1.7
+      - name: Upload Serenity Report
+        uses: actions/upload-artifact@v4
+        if: success() || failure()
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-          path: "**/cucumber-report.json"
-
-
+          name: Serenity Report
+          path: target/site/serenity/index.html
+        
